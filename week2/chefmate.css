@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E53935;
+    padding: 15px;
+    color: white;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #E53935;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .burger {
+        display: block;
+    }
+    .hero-image img {
+        content: url('chickenbiryani.jpeg');
+    }
+}
