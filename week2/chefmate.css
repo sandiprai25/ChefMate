@@ -30,10 +30,43 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-.hero-image img {
+.container {
+    padding: 20px;
+}
+.recipe-image {
     width: 100%;
-    max-width: 800px;
-    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.ingredient-list {
+    list-style: none;
+    padding: 0;
+}
+.ingredient-list {
+    list-style: none;
+    padding: 0;
+    text-align: center; 
+    max-width: 400px; 
+    margin: auto; 
+}
+.cooking-steps {
+    text-align: left;
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+.print-button {
+    background-color: #E53935;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.print-button:hover {
+    background-color: #c62828;
 }
 @media screen and (max-width: 768px) {
     .nav-links {
@@ -53,7 +86,12 @@ body {
     .burger {
         display: block;
     }
-    .hero-image img {
-        content: url('chickenbiryani.jpeg');
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    .recipe-image {
+        width: 90%;
     }
 }
