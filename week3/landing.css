@@ -311,64 +311,69 @@ footer {
     color: var(--medium-gray);
 }
 
-/* Media Queries */
+/* Mobile First Design - Default styles for small screens */
+@media only screen and (max-width: 767px) {
+    .hero {
+        padding: 100px 15px 50px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 5vw;
+    }
+
+    .hero p {
+        font-size: 4vw;
+    }
+
+    .cta-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cta-button {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+/* Tablet screens (≥ 768px) */
 @media (min-width: 768px) {
     .container {
         max-width: 750px;
     }
-    
+
     .features-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
-    
+
     .hero h1 {
         font-size: 40px;
     }
 }
 
+/* Larger tablets and small desktops (≥ 992px) */
 @media (min-width: 992px) {
     .container {
         max-width: 970px;
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+/* Large desktops (≥ 1200px) */
 @media (min-width: 1200px) {
     .container {
         max-width: 1170px;
-    }
-}
-
-/* Mobile First Design - these take precedence for smaller screens */
-@media only screen and (max-width: 600px){
-    .hero {
-        padding: 100px 15px 50px;
-    }
-    
-    .hero h1 {
-        font-size: 28px;
-    }
-    
-    .hero p {
-        font-size: 16px;
-    }
-    
-    .cta-button {
-        width: 90%;
-        max-width: 300px;
-        margin: 10px auto;
-        display: block;
-        text-align: center;
-    }
-    
-    .feature-card {
-        padding: 20px;
-    }
-    
-    .screenshot {
-        width: 200px;
     }
 }
